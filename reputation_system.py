@@ -10,8 +10,8 @@ class ReputationSystem(gl.Contract):
     user_count: u256
     user_data: DynArray[str]
 
-    def __init__(self, owner_address: str):
-        self.owner = Address(owner_address)
+    def __init__(self, owner_address: Address):
+        self.owner = owner_address
         self.user_count = u256(0)
 
     @gl.public.view
@@ -269,3 +269,6 @@ No extra text."""
                 self.user_data[i] = f"{key}{value}"
                 return
         self.user_data.append(f"{key}{value}")
+
+            
+        l
