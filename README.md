@@ -44,6 +44,8 @@ Go to GenLayer Studio at https://studio.genlayer.com and create a new file calle
 
 Follow this order and wait for FINALIZED at each step. Run get_summary first, then register with your GitHub URL and description, then evaluate_profile with your address, then get_profile to see the initial score. You can then run submit_review with additional evidence and get_profile again to see the updated score.
 
+Note: the contract in this repository uses the Address type in the constructor as required by genvm-lint. When deploying in GenLayer Studio use a version that receives str in the constructor and converts internally with Address(owner_address) since Studio requires primitive types to parse the contract schema correctly.
+
 ---
 
 ## Resources
